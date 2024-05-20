@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>이벤트연습</title>
+        <style>
+            div{
+                margin-top :20px;
+               
+            }
+            img{
+                border : 2px solid red;
+                border-radius: 15px;
+            }
+        
+            #detail1,#detail2,#detail3{
+                display :none;
+            }
+            .second{
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img id="doll1" src ="doll.png" alt = "양인형">
+            <div class ="second" id="detail1">더블클릭</div>
+        </div>
+        <div>
+            <img id = "doll2" src ="doll2.png" alt = "양인형">
+            <div class ="second" id="detail2">마우스무브</div>
+        </div>
+        <div>
+            <img id="doll3" src ="doll.png" alt = "양인형">
+            <div class ="second" id="detail3">마우스엔터</div>
+        </div>
+
+
+
+        <script>
+            let bool = true;
+            let a = document.querySelector('#doll1');
+            a.ondblclick = function(){
+                let aa = document.querySelector('#detail1');
+                if(bool==true){
+                    aa.style.display ="block";
+                    bool= !bool;
+               
+                }else if(bool==false){
+                    aa.style.display="none";
+                    bool = !bool;
+                }
+                
+                
+            }
+            let num = 3;
+            let b = document.querySelector('#doll2');
+            b.onmousemove = function(){
+                let bb = document.querySelector('#detail2');
+                if(num%2 == 1){
+                    bb.style.display ="block";  
+                    num++;
+                }else if(num%2==0){
+                    bb.style.display="none";
+                    num++;
+                }
+                
+                
+            }
+            let bool1 = true;
+            let c = document.querySelector('#doll3');
+            c.onmouseenter = function(){
+                let cc = document.querySelector('#detail3');
+                if(bool1 == true){
+                    cc.style.display ="block";
+                    bool1 = !bool1;
+                }else if(bool1 == false){
+                    cc.style.display="none";
+                    bool1=!bool1;
+                }
+               
+                
+            }
+
+        </script>
+    </body>
+</html>

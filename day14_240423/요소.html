@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang=ko>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            .rec{
+                border: 1px solid black;
+                width:100px;
+                height :100px;
+                
+
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="rec">1<span class="text">스팬</span></div>
+        <div class="rec">2<span class="text">스팬</span></div>
+        <div class="rec">3<span class="text">스팬</span></div>
+        <div class="rec">4<span class="text">스팬</span></div>
+
+        <script>
+            let a = document.getElementsByClassName("rec");
+            let t = document.getElementsByClassName("text");
+            for(let i = 0 ; i<a.length; i++){
+                a[i].style.color="red";
+                a[i].style.display="inline-block";
+                t[i].style.color="blue";
+            }
+            a[2].style.backgroundColor="pink";
+            t[3].style.backgroundColor="pink";
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>for문 break</title>
+    </head>
+    <body>
+        <script>
+           
+            for(let i =1; i<=9 ; i++){
+                let sum = 0;
+                if(i==4) continue;
+                document.write("<h3>"+i+"단</h3>");
+                for(let j =1; j<=9; j++){
+                    if(i*j&2!=0) continue;
+                    if(i*j>=10){
+                        document.write("<div>");
+                        document.write(i+"X"+j+" = "+i*j+"\t");
+                        document.write("</div>");
+                    }
+                    else{
+                        document.write("<div>");
+                        document.write(i+"X"+j+" = "+"0"+i*j+"\t");
+                        document.write("</div>");
+                    }
+                    sum+=i*j;
+
+                }
+                document.write("<br>");
+                document.write(i+"단의 짝수 합 : "+sum)
+                document.write("<br>");
+                
+            }
+
+
+
+        </script>
+    </body>
+</html>

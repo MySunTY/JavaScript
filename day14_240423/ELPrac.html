@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>이벤트 리스터</title>
+    </head>
+    <body>
+        <h2>addEventListener()연습</h2>
+        <input type="button" id="btn" value="클릭하면 TEXT가 나옴">
+        <p id="txtt"></p>
+        <button id="reset">초기화</button>
+    </body>
+    <script>
+        let a = document.getElementById("btn");
+        let b = document.getElementById("txtt");
+        let c = document.getElementById("reset");
+        function txt(){
+            b.innerHTML = "글씨가 나왔어요";
+        }
+        function re(){
+            b.innerHTML ="";
+        }
+        a.addEventListener("click",txt); //event명 "" 안에 넣어야함, 함수는 ()안적어도됨
+        c.addEventListener("click",re);
+    </script>
+
+</html>

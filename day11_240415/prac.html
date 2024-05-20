@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>연습</title>
+    </head>
+    <body>
+        <button id = "changeColor" onmouseover="redgreen('yellow')">색 바꾸기</button>
+        <script>
+            let a = document.querySelector('#changeColor');
+            function redgreen(b){
+                a.style.backgroundColor=b;
+                a.style.border="none";
+                onmouseout = function(){
+                    a.style.backgroundColor="green";
+                }
+            }
+            
+        </script>
+    </body>
+
+</html>

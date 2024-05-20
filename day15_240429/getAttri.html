@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>제목</title>
+    </head>
+    <body>
+        <img src="kor.png" alt="한국사진" id="kor">
+        <img src="kor.png" alt="한국사진" id="kor2">
+        <script>
+            let image = document.getElementsByTagName("img");
+            function chPic(){
+                image[0].src="다운로드.png";
+            }
+            image[0].addEventListener("click",chPic);
+            function info(event){
+                alert("이벤트 유형 "+event.type +", 이벤츠 위치 "+event.clientX+","+event.clientY);
+            }
+            image[1].addEventListener("click",info)
+        </script>
+    </body>
+</html>

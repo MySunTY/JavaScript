@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>익명 함수</title>
+    </head>
+    <body>
+        <script>
+            let sum = function(a,b){
+                return a+b;
+            }
+            document.write(sum(15,6));
+            //익명함수 즉시실행
+            document.write("<br>");
+
+            (function(){
+                document.write("즉시실행");
+            }());
+            document.write("<br>");
+            
+            
+            (function(a,b,c){
+
+                document.write(a+b+c);
+            }(2,3,4));
+            document.write("<br>");
+            (function(){
+                document.write("Hello");
+            }());
+            document.write("<br>");
+            let addNum = (function(a,b,c){
+                return a*b-c;
+            }(6,4,1));
+            document.write(addNum);
+            document.write("<br>");
+            (function(a,b,c){
+                document.write(a+"님 환영합니다 "+b+"님 어서오세요 "+c+"님 반갑습니다");
+            }("홍길동","고길동","둘리"));
+            document.write("<br>");
+            (function(a,b,c){
+                document.write(a+"님의 회원번호는 "+b+"이고 비밀번호는 "+c+"입니다");
+            }("홍길동",141414,"a2424"));
+            document.write("<br>");
+            (function(a,b,c,d){
+                document.write("이름 : "+a +", 비밀번호 : "+ b +", 주소 : "+c+", 나이 :"+d);
+            }("홍길동","a1234","서울시 노원구","45"));
+            
+            document.write("<br>");
+            (function(a,b,c,d){
+              
+                
+                document.write("이름 : "+a +", 비밀번호 : "+ b +", 주소 : "+c+", 나이 :"+d);
+            }(prompt("성함을 입력해주세요"),prompt("비밀번호를 입력해주세요"),prompt("나이를 입력해주세요"),prompt("사는곳을 입력해주세요")));
+            document.write("<br>");
+            
+
+        </script>
+    </body>
+</html>

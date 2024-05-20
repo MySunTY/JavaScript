@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>노드리스트</title>
+    </head>
+    <body>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+
+        <script>
+            let bList = document.querySelectorAll("button");
+            
+            
+            bList[0].onclick = function(){
+                bList[0].style.backgroundColor = "red";
+            }
+            bList[1].onclick = function(){
+                bList[1].style.backgroundColor = "blue";
+            }
+            bList[2].onmouseover = function(){
+                bList[2].style.backgroundColor = "orange";
+            }
+        </script>
+    </body>
+</html>

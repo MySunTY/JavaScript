@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>로또</title>
+    </head>
+    <body>
+        <script>
+            let a = new Array(45);
+            for(let i = 0 ; i<a.length; i++){
+                a[i] = i+1;
+            }
+            for(let i = 0 ; i<a.length; i++){
+                let ran = parseInt(Math.random()*45);
+                let tmp = a[0];
+                a[0]= a[ran];
+                a[ran] = tmp;
+                
+            }
+            //for(let i = 0; i <a.length; i++){
+              //  document.write(a[i]+"<br>");
+          //  }
+          document.write("로또 자동번호는 ");
+            for(let i = 0 ; i<6; i++){
+                document.write(a[i]+"\t");
+            }
+        </script>
+    </body>
+</html>

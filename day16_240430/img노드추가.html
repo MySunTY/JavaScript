@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>이미지 추가</title>
+    </head>
+    <body> 
+        <div id="home"></div>
+
+
+        <script>
+            let home = document.querySelector("#home");
+            let newImg = document.createElement("img");
+            let newSrc = document.createAttribute("src");
+            let newAlt = document.createAttribute("alt");
+            newSrc.value = "kor.png";
+            newAlt.value = "한국국기";
+            home.appendChild(newImg);
+            newImg.setAttributeNode(newSrc);
+            newImg.setAttributeNode(newAlt);
+           
+            let newImg2 =document.createElement("img");
+            let newSrc2 =document.createAttribute("src");
+            let newAlt2 = document.createAttribute("alt");
+            newSrc2.value = "다운로드.png";
+            newAlt2.value="한국";
+            home.appendChild(newImg2);
+            newImg2.setAttributeNode(newSrc2);
+            newImg2.setAttributeNode(newAlt2);
+            //newImg2.parentNode.removeChild(newImg2);
+            
+        </script>
+    </body>
+</html>

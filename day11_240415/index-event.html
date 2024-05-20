@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>이벤트</title>
+    </head>
+    <body>
+        <button id="redbutton" onclick="myAlert()" onmouseover="chColor('orange')">버튼</button>
+        <button id="bluebutton">두번째 버튼</button>
+        <button id="orangebutton">세번째 버튼</button>
+        <button id="tt">TT</button>
+        <button id ="chButton" onmouseover="hiyo('orange')">색 바꾸기</button>
+      
+        
+
+        <script>
+             let btn  = document.querySelector('#redbutton');
+             let btn2 = document.querySelector('#bluebutton');
+             let btn3 = document.querySelector('#orangebutton');
+             let btn4 = document.querySelector('#tt');
+             let btn5 = document.querySelector('#chButton');
+            function myAlert(){
+                alert("알림입니다");
+            }
+           
+            let a= true;
+            function chColor(b){
+                if(a==true){
+                    btn.style.backgroundColor=b;
+                    a = !a;
+                }else if(a==false){
+                    
+                    btn.style.backgroundColor="";
+                    a=!a;
+                }
+                
+            }
+
+           
+
+            btn2.onclick = function(){
+                btn2.style.backgroundColor="blue";
+            }
+            
+            btn3.onmouseover = function(){
+                btn3.style.color="orange";
+                btn3.style.fontSize="large";
+
+            }
+            btn3.onmouseout = function(){
+                btn3.style.fontSize="";
+                btn3.style.color="";
+
+            }
+            btn4.onclick = function(){
+                btn4.style.display="none";
+            }
+           
+            
+           function hiyo(e){
+            btn5.style.backgroundColor=e;
+            btn5.style.border="none";
+            onmouseout = function (){
+                btn5.style.backgroundColor="";
+                btn5.style.border="";
+                
+            }
+           }
+
+
+            /*btn5.onmouseover = function(){
+                btn5.style.backgroundColor="pink";
+            }
+            btn5.onmouseout = function(){
+                btn5.style.backgroundColor="blue";
+            }*/
+        </script>
+    </body>
+</html>

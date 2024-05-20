@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>연습문제</title>
+    </head>
+    <body>
+        <script>
+            //변수 ,n 번째 입력
+            //더해지는 숫자
+            // 합
+            let n =1;
+            let num;
+            let sum = Number(0);
+            while(true){
+            num= prompt(n+"번째 입력");
+            n++;
+            if(num=="end") break;
+            if(isNaN(num)==false)
+            num=Number(num);
+            sum+=num;
+           
+            }
+            alert("총합은 "+sum);
+            
+        </script>
+    </body>
+</html>

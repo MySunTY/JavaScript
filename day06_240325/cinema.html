@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>좌석</title>
+        <style>
+             div{
+                border : 1px solid gray;
+                background-color:  gold;
+                width : 100px;
+                height : 100px;
+                line-height: 100px;
+                text-align: center;
+                margin-right:5px;
+                display: inline-block;
+            } 
+
+
+
+        </style> 
+    </head>
+    <body>
+        <script>
+        
+            const col = 10;
+            let total = prompt("총 관객수는?");
+            let row = Math.ceil(total/col);
+            let str = 'A';
+            let soo = str.charCodeAt();
+            
+            for(let i = 0 ; i <row ; i++){
+                for(let j = 1 ; j<=10; j++){
+                    document.write("<div>");
+                    document.write(str+"열");
+                    document.write(j<=9?"0"+j:j);
+                    document.write("</div>");
+                    
+                    let seat = i*col + j;
+                    if(seat==total){
+                        break;
+                    }
+                }
+                    document.write("<br>");
+                    
+            
+
+                
+                
+                
+                soo= soo+1;
+                    str=String.fromCharCode(soo);
+                    
+                
+            }
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>에디오피아 게댑</title>
+        <style>
+            #all{
+                width:1200px;
+            }
+            #img{
+                width:300px;
+                float : left;
+            }
+            .img1{
+                width:80px;
+                
+            }
+            button{
+                width:200px;
+                height:50px;
+            }
+            #sajin{
+                height:200px;
+                width: 250px;
+            }
+            span{
+                color :blue;
+            }
+            a{
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="all">
+            <div id="title">
+                <h1>에디오피아 커피</h1>
+            </div>
+            <div class="img" id="img">
+                <img src="0429_images/coffee-pink.jpg" id="sajin">
+                <div>
+                    <img src="0429_images/coffee-pink.jpg" class="img1">
+                    <img src="0429_images/coffee-blue.jpg" class="img1">
+                    <img src="0429_images/coffee-gray.jpg" class="img1">
+                </div>
+
+
+            </div>
+            <div class="text">
+                <p>상품명: 에디오피카 게댑</p>
+                <p><span>판매가: 9,000원</span></p>
+                <p>배송비: 3,000원</p>
+                <p>(50,000원 이상 구매시 무료)</p>
+                <p>적립금: 180원(2%)</p>
+                <p>로스팅: 2019.06.17</p>
+                <button>장바구니 담기</button>
+                <div class="detail">
+                    <a href="https://www.naver.com/" target="_blank">상세 설명 보기</a>
+                </div>
+            </div>
+         </div>
+    <script>
+        let imgArray = new Array(3);
+        imgArray[0]= "file:///D:/js_workspace/day15_240429/0429_images/coffee-pink.jpg";
+        imgArray[1]= "file:///D:/js_workspace/day15_240429/0429_images/coffee-blue.jpg";
+        imgArray[2]= "file:///D:/js_workspace/day15_240429/0429_images/coffee-gray.jpg";
+
+        let imgs = document.getElementsByClassName("img1");
+        let sajin = document.getElementById("sajin");
+        let price = document.querySelector("span");
+       
+        function chPic(){
+            if(this.src==imgArray[0]){
+                sajin.src=imgArray[0];
+                price.innerHTML = "판매가 : 10,000원";
+            }
+            else if(this.src==imgArray[1]){
+                sajin.src=imgArray[1];
+                price.innerHTML = "판매가 : 13,000원";
+            }else if(this.src==imgArray[2]){
+                sajin.src=imgArray[2];
+                price.innerHTML = "판매가 : 12,000원";
+            }
+        }
+        
+        imgs[0].addEventListener("click",chPic);
+        imgs[1].addEventListener("click",chPic);
+        imgs[2].addEventListener("click",chPic);
+       
+        
+        
+       
+        
+    </script>
+    </body>
+    
+</html>

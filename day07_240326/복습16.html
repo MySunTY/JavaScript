@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>곱하기계산</title>
+    </head>
+    <body>
+        <script>
+            let hol = 1;
+            let jjak = 2;
+            let holsum =1;
+            let jjaksum = 1;
+            for(let i = 1 ; i<=50; i++){
+                holsum=holsum*(-hol);
+                hol=hol+2;
+                jjaksum=jjaksum*jjak;
+                jjak=jjak+2;
+            }
+            document.write(holsum*jjaksum);
+            
+        </script>
+    </body>
+</html>

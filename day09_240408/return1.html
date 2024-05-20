@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>리턴</title>
+    </head>
+    <body>
+        <script>
+            function a(){
+                let sum = 0;
+                let count = 1;
+
+                while(true){
+                    let num = parseInt(prompt("수 입력"));
+                    if(num == 0){
+                        document.write("종료합니다");
+                        return;
+
+                    }
+                    sum+=num;
+                    document.write(count+"번째 ="+sum+"<br>");
+                    count++;
+
+
+                }
+                document.write("<br>");
+                document.write("총 "+count+"번 실행했습니다");
+
+
+            }
+            a();
+
+
+
+        </script>
+    </body>
+</html>

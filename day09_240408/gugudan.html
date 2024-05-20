@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>구구단</title>
+        <style>
+            body{
+                font-size: large;
+                font-weight: bold;
+            }
+            div{
+                display: inline-block;
+                border : 1px solid black;
+                background-color: olive;
+                padding : 20px;
+                
+            }
+            div:nth-child(2n){
+                background-color: brown;
+            }
+            
+            h3{
+                text-align: center;
+
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function gugu(){
+                for(let i =2 ; i<10 ; i++){
+                    document.write("<div>")
+                    document.write("<h3>"+i+"단</h3>");
+                    document.write("<br>");
+                    for(let j = 1 ; j<10; j++){
+                        document.write(i+"*"+j+" = "+i*j+"\t");
+                        document.write("<br>");
+                    }
+                    document.write("</div>");
+                }
+                
+            }
+            gugu();
+            
+        </script>
+    </body>
+</html>

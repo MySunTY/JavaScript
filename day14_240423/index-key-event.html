@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>키이벤트</title>
+    </head>
+    <body>
+        <input id="key" type="text">
+        
+        <h2 id="h2">결과값 :<span></span></h2>
+
+        <script>
+            let key = document.getElementById("key");
+            let a  = document.querySelector("span");
+            key.onkeyup = function(){
+               if(event.keyCode == 13){
+                a.innerHTML = key.value;
+                
+
+               }
+               
+                
+                
+            }
+            /*key.onkeydown = function(){
+                a.innerHTML = key.value;
+                
+            }*/
+            
+            
+            
+        
+        </script>
+    </body>
+</html>

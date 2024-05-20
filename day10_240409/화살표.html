@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>화살표함수</title>
+    </head>
+    <body>
+        <script>
+            //화살표함수  :(매개변수)-> {함수 내용};
+            let hi = function(){
+                return "하이요";
+            }
+            
+            let hiyo = ()=>{return "하이요"};
+
+            document.write(hi()+hiyo());
+            document.write("<br>");
+            let bye = (a,b)=> {return a+b};
+            document.write(bye(2,3));
+            document.write("<br>");
+            document.write(bye(5,6));
+            document.write("<br>");
+            let calNum = (a,b,c)=>{return a*b-c};
+            document.write(calNum(5,6,2));
+            document.write("<br>");
+            let member = (a,b,c,d)=>{return "이름: "+a+" 나이: "+b+" 회원번호: "+c+" 전화번호: "+d };
+            document.write(member("이재민",45,3535,3523525));
+            let member1 = (a,b,c,d)=>{alert("이름: "+a+" 나이: "+b+" 회원번호: "+c+" 전화번호: "+d) };
+            member1(prompt("이름은?"),prompt("나이?"),prompt("회원번호는?"),prompt("전화번호는?"));
+            document.write("<br>");
+            ()=>{document.write("즉시실행")};
+
+        </script>
+    </body>
+</html>

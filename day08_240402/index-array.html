@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>배열</title>
+    </head>
+    <body>
+        <script>
+            let arr1 = [100,45,150,4,13];
+
+            for(let i = 0 ; i<5 ; i++){
+                document.write("<br>"+"arr1["+i+"] = "+arr1[i]);
+            }
+            document.write("<br>");
+            let sum = 0;
+            for(let i = 0 ; i<5; i++){
+                sum= sum+arr1[i];
+            }document.write("arr1배열의 총합은 "+sum+"입니다");
+           
+            //배열은 같은 자료형을 담는게 좋음
+
+            let season = new Array(4);
+            document.write("<br>");
+            season[0] = "봄"; 
+            season[1] = "여름";
+            season[2] = "가을"; 
+            season[3] = "겨울";
+            
+
+            let num = [1,2,3,4,5,6,7,8,9,10];
+
+            for(let i = 0; i<=3 ; i++){
+                document.write(season[i]+"\t");
+            }
+
+            let soo =[];
+            for(let i = 0 ; i<=9 ; i++){
+                soo[i] = i;
+                document.write("<br>"+"soo["+i+"] = "+soo[i]);
+            }
+
+            let nara = new Array();
+            nara[0] = "한국";
+            nara[1] = "미국";
+            nara[2] = "영국";
+            nara[3] = "중국";
+            nara[4] = "캐나다";
+            nara[5] = "콩고";
+            nara[6] = "일본";
+            nara[7] = "대만";
+            nara.unshift("사우디아라비아");
+            //unshift 앞에다 삽입
+            //shift 앞에꺼 삽입
+               
+            for(let i = 0; i<nara.length;i++){
+                document.write("<br>");
+                document.write("nara["+i+"] = "+nara[i]);
+            }
+        </script>
+    </body>
+</html>

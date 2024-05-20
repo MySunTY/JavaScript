@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>학생수</title>
+        <style>
+         label{
+            
+            width: 300px;
+         }
+        </style>
+    </head>
+    <body>
+        <p><lable> 학생수
+            <input type="number" name = "stu" id = "stu" required>
+        </lable></p> 
+        <p><label>학과 과목
+            <input type="number" name = "sub" id = "sub" required>
+        </label></p>
+        <p><label>전체 교과서 양
+            <input type="number" name = "all" id ="all" readonly>
+        </label></p>
+    </body>
+    <script>
+        let numTag = document.querySelectorAll('input');
+
+        numTag[1].onkeyup = function(){
+            numTag[2].value = Number(numTag[0].value)*Number(numTag[1].value);
+        }
+    </script>
+</html>

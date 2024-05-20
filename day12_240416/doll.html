@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>인형</title>
+    </head>
+    <body>
+        <img id ="doll1" src ="../day11_240415/doll.png" alt="양인형">
+        <img id ="doll2" src ="../day11_240415/doll2.png" alt="양인형2">
+        <img id ="doll3" src ="../day11_240415/doll.png" alt="양인형">
+        
+
+        <script>
+            let a = document.getElementById("doll1");
+            a.onclick = function myDo(){
+                a.style.transform ="scale(110%)";
+                onmouseout = function(){
+                    a.style.transform="scale(100%)";
+                }
+            }
+            
+            let b = document.getElementById("doll2")
+            b.onmouseover = function(){
+                b.style.transform = "scale(50%)";
+                onmouseout = function(){
+                    b.style.transform = "scale(100%)";
+                }
+            }
+
+            let c = document.getElementById("doll3")
+            let bool = true;
+            if(bool == true){
+                c.onmousemove = function tt(){
+                c.style.transform ="scale(80%)";
+                 }
+            }
+        </script>
+    </body>
+    
+</html>

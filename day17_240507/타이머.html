@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>타이머</title>
+    </head>
+    <body>
+        <input type="button" id="start" value="수업시작">
+        <p></p>
+        
+        <script>
+            let btn = document.querySelector("input");
+            let newP = document.querySelector("p");
+           
+            setInterval(timeHandler,1000);
+            function timeHandler(){
+                let now = new Date();
+                let hours = now.getHours();
+                let min = now.getMinutes();
+                let sec = now.getSeconds();
+                newP.innerHTML = hours+"-"+min+"-"+sec;
+            }
+
+            btn.addEventListener("click",setInterval);
+
+            function fun(){
+                alert("Welcome");
+            }
+            setInterval(fun,3000);
+            
+        </script>
+    </body>
+</html>

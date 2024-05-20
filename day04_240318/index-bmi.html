@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+        <meta charset="utf-8">
+        <title>BMI지수 구하기</title>
+   </head>
+   <body>
+    
+    <script>
+        let height = prompt("당신의 키는?" ,1.8);
+        alert("당신의 키는 "+height+"입니다");
+        let weight = prompt("당신의 몸무게는?" , 70);
+        alert("당신의 몸무게는 "+weight+"입니다");
+        let bmi = weight/(height*height);
+        bmi = bmi.toFixed(2);
+        alert("당신의 bmi 지수는 "+bmi+"입니다");
+        document.write("당신의 bmi는 "+bmi+"입니다");
+        document.write("<br>");
+
+      let k = "document.write("<img src='";
+
+
+        if(bmi<18.5){
+            alert("저체중입니다");
+            document.write("<b>저체중입니다</b>");
+            document.write("<br>");
+            document.write("<img src='w1.jpg'>");
+            document.write("<br>");
+            document.write("<img src='18.jpg'>");
+            document.write("<br>");
+            document.write("<img src='m1.jpg'>");
+            document.write("<br>");
+            
+            
+            document.write("<img src ='비만이미지/bmi.jpg'>");
+            
+        }else if(bmi<23){
+            alert("정상체중입니다");
+         
+            document.write("<b><big>정상체중입니다</b></big>");
+            document.write("<br>");
+            document.write("<img src='w2.jpg'>");
+           
+            document.write("<br>");
+            document.write("<img src='24.jpg'>");
+            document.write("<br>");
+            document.write("<img src='m2.jpg'>");
+            document.write("<br>");
+            
+          
+        }else if(bmi<25){
+            alert("과체중입니다");
+            document.write("<b><em>과체중입니다</b></em>");
+            document.write("<br>");
+            document.write("<img src='w3.jpg'>");
+            document.write("<br>");
+            document.write("<img src='29.jpg'>");
+            document.write("<br>");
+            document.write("<img src='m3.jpg'>");
+            document.write("<br>");
+            
+            document.write("<img src ='bmi.jpg'>");
+        }else if(bmi<30){
+            alert("경도비만입니다");
+            document.write("<b><big><mark>경도비만입니다</b></big></mark>");
+            document.write("<br>");
+            document.write("<img src='w4.jpg'>");
+            document.write("<br>");
+            document.write("<img src='34.jpg'>");
+            document.write("<br>");
+            document.write("<img src='m4.jpg'>");
+            document.write("<br>");
+            
+            document.write("<img src ='bmi.jpg'>");
+        }else if(bmi<35){
+            alert("중정도 비만입니다");
+            document.write("중정도 비만");
+            document.write("<br>");
+            document.write("<img src='w5.jpg'>");
+            document.write("<br>");
+            document.write("<img src='35.jpg'>");
+            document.write("<br>");
+            document.write("<img src='m5.jpg'>");
+            document.write("<br>");
+            
+            document.write("<img src ='bmi.jpg'>");
+        }else{
+            alert("고도 비만입니다");
+            document.write("고도비만입니다");
+            document.write("<br>");
+            document.write("<img src='w5.jpg'>");
+            document.write("<br>");
+            document.write("<img src='35.jpg'>");
+            document.write("<br>");
+            document.write("<img src='m5.jpg'>");
+            document.write("<br>");
+            document.write("<br>");
+            
+            document.write("<img src ='bmi.jpg'>");
+           
+        }
+     
+        
+
+    </script>
+   </body>
+</html>

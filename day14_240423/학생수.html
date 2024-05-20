@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>학생수 학과과목</title>
+        <style>
+            div{
+                margin :30px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div>
+            <label>
+                학생수 <input type="number" id = "student">
+            </label>
+        </div>
+        <div>
+            <label>
+                학과 과목 <input type="number" id = "subject">
+            </label>
+         </div>
+            <h3>전체 교과서양 :<span></span></h3>
+        <div>
+            <input type="submit" value="계산" id="cal">
+            <input type="reset" value="초기화" id="reset">
+        </div>
+        
+        <script>
+            let a = document.getElementById("student");
+            let b = document.getElementById("subject");
+            let c = document.querySelector('span');
+            let d = document.getElementById("cal");
+            let e = document.getElementById("reset");
+
+            d.onclick = function(){
+               let result=  Number(a.value)*Number(b.value);
+                c.innerHTML = result;
+            }
+            e.onclick = function(){
+                a.value="" ;
+                b.value= "" ;
+                c.innerHTML = "";
+            }
+            
+        </script>
+    </body>
+</html>

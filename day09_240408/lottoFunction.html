@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>로또함수</title>
+    </head>
+    <body>
+        <script>
+            let a = new Array(45);
+            for(let i = 0 ; i<a.length;i++){
+                a[i]= i+1;
+            }
+            for(let i = 0 ; i<6; i++){
+                function getNumber(){
+                let ran = parseInt(Math.random()*45);
+                if(a[ran]==-1){
+                    i--;
+                    
+                }else{
+                    document.write(a[ran]+"<br>");
+                a.splice(ran,1,-1);
+                }
+                
+               
+               
+                }
+            getNumber();
+
+
+            }
+
+            
+        </script>
+    </body>
+</html>

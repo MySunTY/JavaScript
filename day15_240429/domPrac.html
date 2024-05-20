@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>innerHTML</title>
+        <style>
+            input{
+                width : 100px;
+                margin : 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="button" id="btn1" value="innerHTML"><br>
+        <input type="button" id="btn2" value="innerText">
+        
+        <div class="date"></div>
+        <p id="time"></p>
+        <p id="img"></p>
+        <script>
+            let btn = document.getElementsByTagName("input");
+            let line = document.getElementsByTagName("p");
+            let now = document.querySelector(".date");
+           
+            let date = new Date();
+            let dayoftheWeek = date.getDay();
+            
+            btn[0].addEventListener("click",function(){
+                
+               line[0].innerHTML = "<h1>innerHTML</h1><img src='다운로드.png'>"; 
+               now.innerHTML = "오늘의 날짜는 " +date.getFullYear()+"년 "+Number(date.getMonth()+1)+"월 "+date.getDate()+
+               "일 "+weekStr(dayoftheWeek)+"요일 "+date.getHours()+"시 "+date.getMinutes()+"분";
+               
+               this.value="클릭했습니다";
+               line[0].style.color="black";
+               
+               
+               
+            });
+            btn[1].addEventListener("mouseover",function(){
+                this.value="마우스 올려짐";
+                btn[0].value ="";
+                line[0].innerText="innerText";
+                line[0].style.color="red";
+                now.innerText = "현재 시간은 "+date.getHours()+"시 "+date.getMinutes()+"분";
+                
+            });
+            btn[1].addEventListener("mouseout",function(){
+                this.value="마우스나갔음";
+                btn[0].value="innerHTML";
+                line[0].style.color="black";
+                
+            });
+
+            function weekStr(week){
+                let weekstr ="";
+                switch(week){
+                    case 0: weekstr ="일";
+                    break;
+                    case 1: weekstr ="월";
+                    break;
+                    case 2: weekstr = "화";
+                    break;
+                    case 3: weekstr = "수";
+                    break;
+                    case 4: weekstr = "목";
+                    break;
+                    case 5: weekstr = "금";
+                    break;
+                    case 6: weekstr = "토";
+                    break;
+
+
+
+                }
+                return weekstr;
+            }
+            
+        </script>
+    </body>
+
+</html>

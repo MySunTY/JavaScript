@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>연습연습</title>
+        <style>
+            #tt{
+                display : none;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img src="doll.png" alt="양인형" onclick = "myClick()" >
+            <div id="tt">이미지가 사라짐</div>
+        </div>
+        
+        <script>
+            let bool = true;
+            let a = document.querySelector("img");
+            let aa = document.querySelector('#tt')
+            function myClick(){
+                if(bool == true){
+                    alert("클릭해서 사라졌습니다");
+                    a.style.display="none";
+                    bool = !bool;
+                    aa.style.display = "block";
+
+                }else if(bool==false){
+                    aa.onclick = function(){
+                        a.style.display="block";
+                        alert("사진이 다시 돌아왔습니다");
+                        bool=!bool;
+                        aa.style.display="none";
+                    }
+                  
+                }
+                
+            }
+        </script>
+    </body>
+</html>

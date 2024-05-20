@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>타이머</title>
+        <style>
+            #box{
+                width:300px;
+                height : 100px;
+                border : 1px solid black;
+                
+                text-align: center;
+            }
+            input{
+                width:150px;
+
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>타이머</h1>
+        <div id="box">
+           
+        </div>
+        <input type="button" id="btn" value="">
+        <div>
+            <img id="img" src="bell1.png" alt="bell">
+        </div>
+        
+
+        <script>
+            let box = document.getElementById("box");
+            let btn = document.getElementById("btn");
+            setInterval(timeHandler,1000);
+            function timeHandler(){
+                let now = new Date();
+            
+            
+            let hours = now.getHours()>12?"오후"+(now.getHours()-12):"오전"+now.getHours();
+            
+
+
+            let min = now.getMinutes();
+            let sec = now.getSeconds();
+            let nowTime = hours+"시-"+min+"분-"+sec+"초";
+            
+            box.innerHTML = "<h1>"+nowTime+"</h1>";
+            btn.setAttribute("value","쉬는시간 "+(50-now.getMinutes())+"분 후");
+            let img = document.getElementById("img");
+
+            if(img.getAttribute("src")=="bell1.png"){
+                img.setAttribute("src","bell2.png");
+            }else{
+                img.setAttribute("src","bell1.png");
+            }
+            if(now.getMinutes()>=50){
+                img.style.display="block";
+                btn.setAttribute("value","수업시간 "+(60-now.getMinutes())+"분 후");
+                
+            }else{
+                img.style.display="none";
+                btn.setAttribute("value","쉬는시간 "+(50-now.getMinutes())+"분 후");
+            }
+            }//function
+            
+            let clBtn = null;
+            btn.addEventListener("click",function(){
+                clBtn = new Date();
+                let tMin = clBtn.getMinutes();
+                let tSec = clBtn.getSeconds();
+                if(clBtn.getMinutes>=50){
+                    btn.setAttribute("value","수업시간"+(59-tMin)+"분 "+(60-tSec)+"초 남음");
+                }else{
+                    btn.setAttribute("value","쉬는시간"+(49-tMin)+"분 "+(60-tSec)+"초 남음");
+                }
+                
+
+            });
+            
+           
+         
+        </script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>디데이</title>
+        <style>
+            .nemo{
+                width : 300px;
+                height : 300px;
+                border : 1px solid black;
+                position: relative;
+                text-align: center;
+            }
+            .circle{
+                width : 150px;
+                height : 150px;
+                border-radius: 50%;
+                background-color: blue;
+                position: absolute;
+                left:50%;
+                top : 50%;
+                transform:translate(-50%,-50%) ;
+            }
+            h2{
+                
+                position: absolute;
+                
+                color:white;
+                left :50%;
+                top : 50%;
+                transform: translate(-50%,-50%);
+                font-size: large;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="nemo">
+            <h1>수료까지</h1>
+            <div class="circle">
+
+                <h2>D-<span></span>일</h2>
+            </div>
+
+        </div>
+        <p></p>
+        <script>
+            let dDay = new Date("2024-07-12");
+            let dDayTime= dDay.getTime();
+            let today = new Date();
+            let todayTime= today.getTime();
+           //let day = today.getFullYear()+"-"+Number(today.getMonth()+1)+"-"+today.getDate();
+            let result = document.querySelector("span");
+            result.innerHTML=((dDayTime-todayTime)/(1000*60*60*24)).toFixed(0);
+            let a = new Date("2024-07-12");
+            let b = new Date("2024-04-30");
+            let pp = document.querySelector("p");
+            pp.innerHTML= (a-b)/(1000*60*60*24);
+        </script>
+    </body>
+</html>

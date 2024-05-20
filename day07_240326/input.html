@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+<body>
+    <!--인풋태그는 인라인테그, 내부에 value라는 변수를 가지고 값을 저장함-->
+    <input id="A" type="text">
+    <input id ="B" type="button" value="클릭!">
+    <input type="color">
+    <input type="number">
+    <script>
+        let A=document.getElementById("A");
+        console.log(A);
+        B.addEventListener("click",function(){
+            console.log(A.value);
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>하이요</title>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                border : 1px solid black;
+                
+            }
+            #hi{
+                width: 100px;
+                height: 100px;
+                border : 1px solid black; 
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div style="background-color:yellow"></div>
+        <div id="hi" style="background-color:blue"></div>
+        <script>
+            let divs = document.querySelector("div");
+            let hi = document.getElementById("hi");
+            divs.addEventListener("click",function(){
+                if(divs.getAttribute("style")=="background-color:yellow"){
+                    divs.setAttribute("style","background-color:red");
+                }else if(divs.getAttribute("style")=="background-color:red"){
+                    divs.setAttribute("style","background-color:yellow");
+                }
+
+            });
+            hi.addEventListener("click",function(){
+                if(hi.getAttribute("style")=="background-color:blue"){
+                    hi.setAttribute("style","background-color:orange");
+                }else if(hi.getAttribute("style")=="background-color:orange"){
+                    hi.setAttribute("style","background-color:blue");
+                }
+
+            });
+        </script>
+    </body>
+</html>

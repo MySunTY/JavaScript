@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>좌석 예약시스템</title>
+        <style>
+            body{
+                width: 1080px;
+            }
+            div{
+                border : 1px solid gray;
+                background-color:  gold;
+                width : 100px;
+                height : 100px;
+                line-height: 100px;
+                text-align: center;
+                margin-right:5px;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+    
+
+
+        <script>
+          /* let people = parseInt(prompt("총 몇명인가요?"));
+        
+           for(let i = 1; i<=parseInt(people/10) ; i++ ){
+                for(let j = 1 ; j<=10;j++){
+                    document.write("<div>"+"A열"+j+"번"+"</div>");
+                  //  if(j==10){
+                   //     document.write("<br>");
+                   // }
+                   
+                }
+                for(k = 1 ; k<=people&10 ; k++){
+                    document.write("<div>"+"A열"+k+"번"+"</div>");
+                }
+                //document.write("<br>");
+                //document.write("<div>"+people%10+"</div>");
+            }*/
+
+            const col = 10;
+            let total = Number(prompt("전체인원은?"));
+            let row = Math.ceil(total/col);
+
+            for(let j = 1 ; j<=row; j++){
+                for(let i = 1 ; i <= 10 ; i++){
+                    document.write("<div>"+j+"열"+i+"번"+"</div>");
+                }
+            }
+       
+        </script>
+    </body>
+</html>

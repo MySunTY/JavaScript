@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>로또</title>
+    </head>
+    <body>
+        
+        <script>
+           //배열에 랜덤하게 숫자 담고
+           //pop으로 6개꺼내기
+            
+            
+        /*  for(let i = 1; i<=6 ; i++){
+            let a =parseInt(Math.random()*45);
+            document.write((a+1)+"<br>");
+          }
+          document.write('<img src="로또.jpg">'); */
+
+        /*  let a =parseInt(Math.random()*45)+1;*/
+
+          let lotto = new Array(45);
+          for(let i =0 ; i<lotto.length; i++){
+            lotto[i] = i+1;
+          }
+         /* function getRandomValue(lotto){
+            let result = parseInt(Math.random()*45)+1;;
+         return lotto[result];
+          }
+
+          const result1 = getRandomValue(lotto);
+          /*const result2 = getRandomValue(lotto);
+          const result3 = getRandomValue(lotto);
+          const result4 = getRandomValue(lotto);
+          const result5 = getRandomValue(lotto);
+          const result6 = getRandomValue(lotto);*/
+        //  document.write(result1);
+
+      
+          for(let i = 0 ; i<=5 ; i++){
+            function getLotto(){
+            let a = parseInt(Math.random()*44);
+            let random = lotto[a];
+            lotto.splice(a,1,-1)
+            return random;
+          }
+            let result1 = getLotto();
+            if(result1==-1){
+                i-- ;
+
+            }else{
+            document.write(result1+"<br>");
+            }
+            
+          }
+
+          for(let i =0 ; i<lotto.length;i++){
+            document.write("lotto["+i+"] = "+lotto[i]+"<br>");
+          }
+
+
+
+          //for(let i =0 ; i<l.length; i++){
+          //  document.write(l[i]);
+         // }
+
+            
+        </script>
+    </body>
+</html>

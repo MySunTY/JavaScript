@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>nth-child</title>
+        <style>
+            *{
+                list-style: none;
+            }
+            ul{
+                width : 500px;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li id="tt">목록1</li>
+            <li id="tt">목록2</li>
+            <li id="tt">목록3</li>
+            <li id="tt">목록4</li>
+            <li id="tt">목록5</li>
+            <li id="tt">목록6</li>
+            <li id="tt">목록7</li>
+            <li id="tt">목록8</li>
+            <li id="tt">목록9</li>
+            <li id="tt">목록10</li>
+        </ul>
+        
+        
+        
+        <script>
+            let liList = document.querySelectorAll("li");
+            let li1 = document.querySelector("li:first-child");
+            li1.style.backgroundColor="red";
+            
+
+            
+            let li2 = document.querySelector("li:last-child");
+            li2.style.backgroundColor="blue";
+            let li3 = document.getElementById("tt");
+            li3.style.backgroundColor="pink";
+        </script>
+
+    </body>
+</html>

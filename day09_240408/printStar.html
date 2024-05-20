@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>printStar</title>
+    </head>
+    <body>
+        <script>
+            let star = "";
+            function printStar(n){
+                let star = "";
+                for(let i = 1; i<=n; i++){
+                    for(let j = 0 ; j<=i; j++){
+                        star=star+"*";
+                    }
+                    star=star+"<br>";
+                }
+            document.write(star);
+            }
+            printStar(5);
+            printStar(8);
+            printStar(11);
+            function tree(m){
+               for(let i = 1 ; i <=m ; i++){
+                for(let j = 1 ; j<=m ;j++){
+                    document.write("*");
+                }
+                document.write("<br>");
+               }
+            }
+            tree(5);
+            
+            
+            
+         
+            
+        </script>
+    </body>
+</html>

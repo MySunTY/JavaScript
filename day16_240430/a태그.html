@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>a태그</title>
+    </head>
+    <body>
+        <a href="#" id="hi">하이</a>
+        <a href="#" id="bye">바이</a>
+        <p></p>
+        <div></div>
+        <script>
+            let hi = document.getElementById("hi");
+            let bye = document.getElementById("bye");
+            let pp = document.getElementsByTagName("p");
+            let divv = document.querySelector("div");
+
+            hi.addEventListener("click",function insa(){
+                pp[0].innerHTML ="하이요";
+            });
+            bye.addEventListener("click",function(){
+                divv.innerHTML = "바이요";
+            })
+        </script>
+    </body>
+</html>

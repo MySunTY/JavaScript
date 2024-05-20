@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>로또함수2</title>
+    </head>
+    <body>
+        <script>
+            let lottoArray = new Array();
+            
+            function ran(){
+                let num = parseInt(Math.random()*45+1);
+                return num;
+            }
+            while(lottoArray.length<6){
+               
+                lottoArray.push(ran()); 
+            }
+        
+              
+            
+            for(let i = 0 ; i<lottoArray.length; i++){
+                document.write(lottoArray[i]+"\t");
+            }
+            
+        </script>
+    </body>
+</html>

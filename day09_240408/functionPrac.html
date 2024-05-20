@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>함수연습</title>
+    </head>
+    <body>
+        <script>
+            function addNum(num1,num2){
+                return num1+num2;
+                
+            }
+            let result = addNum(5,12);
+            document.write("계산 결과는 "+result+"입니다");
+
+            function multiNum(a,b,c){
+                return a*b*c;
+            }
+            document.write("<br>");
+            let multiResult = multiNum(3,5,1);
+            document.write("계산 결과는 "+multiResult+"입니다");
+
+            function sumNum(n){
+                let sum =0;
+                for(let i = 1 ; i<=n; i++){
+                    sum = sum+i;
+                }
+                document.write("1부터 "+n+"까지 더한 값은 "+sum+"입니다");
+            }
+            document.write("<br>");
+            
+            let num1 = prompt("1부터 몇까지 더할까요?");
+            if(num1 !== isNaN){
+            parseInt(sumNum(num1));
+            }else{
+                alert("값을 다시 입력해주세요");
+            }
+      
+        </script>
+    </body>
+</html>

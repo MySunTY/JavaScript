@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>함수</title>
+    </head>
+    <body>
+
+        <button id="lar">버튼</button>
+        <script>
+            let a = document.getElementById("lar");
+            let num = 4;
+            a.onclick = function(){
+                if(num%4==0){
+                    a.style.fontSize="x-large";
+                    num++;
+                }else if(num%4==1){
+                    a.style.color="red";
+                    num++;
+                }else if(num%4==2){
+                    a.style.backgroundColor="green";
+                    num++;
+                }else if(num%4==3){
+                    a.style.fontSize="medium";
+                    a.style.color="black";
+                    a.style.backgroundColor="white";
+                    num++;
+                }
+               
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>로또</title>
+    </head>
+    <body>
+        
+
+
+        <script>
+            let arr = new Array(45);
+            let ranNum=0 ;
+            let tmp =0;
+
+            for(let i =0 ; i<arr.length; i++){
+                arr[i] = i+1;
+            }//규칙적인 배열
+            for(let i = 0 ; i<arr.length; i++){
+                ranNum= parseInt(Math.random()*45);
+                tmp = arr[i];
+                arr[i] = arr[ranNum];
+                arr[ranNum]=tmp;
+
+            }//배열 랜덤하게 
+            for(let i = 0 ;i<6;i++){
+                document.write((i+1)+"번째 숫자 ="+arr[i]+"<br>");
+            }
+            
+
+        
+
+        </script>
+    </body>
+
+</html>

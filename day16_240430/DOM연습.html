@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>돔</title>    
+    </head>
+    <body>
+        <a href="#" id="detail">클릭해서 더 보기</a>
+        <div></div>
+        <script>
+            let TEXT = document.getElementById("detail");
+            let divv = document.querySelector("div");
+            let count =0;
+            let newP= document.createElement("p");
+            let newText = document.createTextNode("더보기를 클릭했습니다");
+            TEXT.addEventListener("click",function(){
+               
+                
+                if(count%2==0){
+                    
+                    divv.appendChild(newP);
+                    newP.appendChild(newText);
+                    count++;console.log(count);
+                }
+                else if(count%2==1){
+                    divv.removeChild(newP);
+                //newP.appendChild(newText);
+                    divv.innerHTML="";
+                    count++;
+                    console.log(count);
+
+                }
+                
+               
+            });
+            
+
+        </script>
+    </body>
+</html>

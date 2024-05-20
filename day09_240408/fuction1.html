@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>함수</title>
+    </head>
+    <body>
+        <script>
+            function addNum(a,b){
+               return a+b;
+                
+            }
+           
+            function minusNum(a,b){
+                if(a>b){
+                return a-b;
+                }
+                else if(a<=b){
+                    
+                    return b-a;
+                }
+            }
+
+            function multiNum(a,b){
+               return a*b;
+            }
+            function divideNum(a,b){
+                return a/b;
+            }
+            
+            
+                
+           
+           
+           
+            let c;
+            let num1 = parseInt(prompt("첫번째 숫자를 입력하세요"));
+            let num2 = parseInt(prompt("두번째 숫자를 입력하세요"));
+            let result = parseInt(prompt("1,더하기, 2 빼기 , 3, 곱하기 , 4, 나누기"));
+            if(result == 1){
+                result = "더하기";
+                c= addNum(num1,num2);
+               
+            }else if(result == 2){
+                result = "빼기";
+                c=  minusNum(num1,num2);
+            }else if(result ==3){
+                result = "곱하기";
+               c= multiNum(num1,num2);
+            }else if(result ==4){
+                result="나누기";
+               c= divideNum(num1,num2).toFixed(2);
+               
+            
+            }
+            
+            function printNum(num1,num2,result,c){
+       
+            document.write(num1+"와 "+num2+"의 "+result+" 결과는"+c);
+            }
+            printNum(num1,num2,result,c);
+        </script>
+    </body>
+</html>

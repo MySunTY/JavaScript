@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>사진 바꾸기</title>
+        <style>
+            #img1 , #img2 , #img3{
+                width:100px;
+            }
+            div{
+                width :300px;
+                height:300px;
+                border : 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <img src="0429_images/coffee-pink.jpg" id="img">
+        <img src="0429_images/coffee-pink.jpg" id="img1">
+        <img src="0429_images/coffee-blue.jpg" id="img2">
+        <img src="0429_images/coffee-gray.jpg" id="img3">
+        <script>
+            
+            
+            let imgs = document.getElementsByTagName("img");
+            function chPic(){
+                let newPic = this.src;
+                imgs[0].setAttribute("src",newPic);
+                
+            }
+            for(let i=0 ; i<imgs.length;i++){
+                imgs[i].addEventListener("click",chPic);
+            }
+            /*imgs[1].addEventListener("click",chPic);
+            imgs[2].addEventListener("click",chPic);
+            imgs[3].addEventListener("click",chPic);*/
+
+        </script>
+    </body>
+</html>

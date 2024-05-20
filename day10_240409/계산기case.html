@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>계산기스위치</title>
+    </head>
+    <body>
+        <script>
+            let add = (a,b)=>a+b;
+            let minus = (a,b)=>a-b;
+            let multi = (a,b)=>a*b;
+            let divide = (a,b)=>a/b;
+
+            let num1 = parseInt(prompt("첫번째 숫자를 입력해주세요"));
+            let num2 = parseInt(prompt("두번째 숫자를 입력해주세요"));
+            let op = parseInt(prompt("1. 더하기 , 2 빼기, 3 곱하기 , 4 나누기"));
+
+            switch(op){
+                case 1 :  
+                op = "더하기"; 
+                result = add(num1,num2);
+               
+                break;
+
+                case 2 :
+                op = "빼기";  
+                result = minus(num1,num2);
+                
+                break;
+
+                case 3 : 
+                op = "곱하기"; 
+                result = multi(num1,num2);
+                
+                break;
+
+                case 4 : 
+                op = "나누기"; 
+                result = (divide(num1,num2)).toFixed(2);
+                
+                break;
+
+                default : alert("잘못 입력하셨습니다");
+
+
+            }
+            document.write(num1+"와(과) "+num2+"의 "+op+" 결과는 "+result+"입니다");
+
+        </script>
+    </body>
+</html>

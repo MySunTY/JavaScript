@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+    <html>
+        <meta charset="utf-8">
+        <title>인풋</title>
+    </html>
+    <body>
+        <label for="id">아이디
+            <input type ="text" id="id" >
+        </label>
+        <label for="pw">비밀번호
+            <input type = "password" id="pw">
+        </label>
+    
+        <input type="button" id="btn" value="로그인">
+        <p>아이디 : <span></span></p>
+        <p>비밀번호 : <span></span></p>
+        <h1></h1>
+        
+        
+        <script>
+            let a = document.getElementById("id");
+            let b = document.getElementById("pw");
+
+            let c = document.getElementById("btn");
+            let d = document.querySelector("h1");
+            let spanList = document.querySelectorAll("span");
+            
+            c.onclick = function login(){
+               spanList[0].innerHTML = a.value;
+               spanList[1].innerHTML = b.value;
+               d.innerHTML = a.value +"님 로그인 되셨습니다";
+            }
+           
+            
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>함수 매개변수</title>
+    </head>
+    <body>
+        <script>
+            function mul(a,b,c){
+                return a*b*c;
+            }
+            //let result = mul(2,3,4);
+
+            let subNum= function(i,j){
+                return i-j;
+            }
+            let k = subNum(5,2);
+            document.write(k);
+            document.write("<br>");
+
+            function pow(e){
+                return e*e;
+            }
+            let result = pow(3);
+            document.write("3X3 = "+result);
+            document.write("<br>");
+            
+            let age =0;
+            function setAge(kkk){
+                return kkk+20;
+                        
+            }
+            let resultAge = setAge(8);
+            document.write(resultAge);
+
+            
+
+          
+
+            let student = ['마이콜','맛좋은라면','꼬불꼬불','연탄'];
+            student.push("깐따삐야");
+            student.push("엄마");
+            function print(a){
+                for(let i = 0 ; i<a.length;i++){
+                    document.write("<br>"+a[i]); //a의 타입은 object타입
+                }
+            }
+            print(student);
+
+            function printDo(b ,c){
+                for(let j =0 ; j<b.length;j++){
+                    document.write("<br>"+b[j]+c);
+                    
+                }
+            }
+            printDo(student,"!");
+     
+            
+           /* let ggan = ['깐따삐야?!','엄마?'];
+            function printDoDo(c){
+                for(let i = 0 ; i<c.length;i++){
+                    document.write("<br>"+c[i]);
+                }
+            }
+            printDoDo(ggan);*/
+            
+
+            
+            
+            
+            /*for(let i = 0; i<student.length; i++){
+                document.write("<br>"+student[i]);
+            }
+            for(let i = 0; i<student.length; i++){
+                document.write("<br>"+student[i]+"!");
+            }
+            student.push("깐따삐야?!");
+            student.push("엄마?");
+            for(let i = 4 ; i<=5; i++){
+                document.write("<br>"+student[i]);
+            }*/
+
+            
+            
+        </script>
+    </body>
+</html>

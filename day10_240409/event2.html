@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>이벤트</title>
+        <style>
+            div{
+                width:100px;
+                height : 100px;
+                background-color: aqua;
+                margin-top : 10px;
+                text-align: center;
+                line-height: 100px;
+                font-weight: bold;
+                font-size: x-large;
+                display: inline-block;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div id="rect">
+            네모
+        </div>
+        <div id="rect1">
+            네모
+        </div>
+        <div id="rect2">
+            <a href ="https://www.naver.com/" target="_blank">네모</a>
+        </div>
+        <div id="changeColor">
+            네모
+        </div>
+        <div id="tt">
+            네모
+        </div>
+        <div id="yy">
+            네모
+        </div>
+        
+        <script>
+            let rect = document.getElementById("rect");
+            rect.onmouseover = function(){
+                rect.style.backgroundColor="gold";
+                rect.style.color="white";
+                rect.style.scale="150%";
+            }
+            let rect1 = document.getElementById("rect1");
+            rect1.onclick = function(){
+                rect1.style.color="blue";
+                rect1.style.cursor="pointer";
+                this.style.backgroundColor="pink";
+                
+            }
+            let rect2 = document.getElementById("rect2");
+            rect2.ondblclick = function(){
+                rect2.style.fontSize="small";
+                rect2.style.scale="50%";
+            }
+
+            let a= true;
+            let chan = document.getElementById("changeColor");
+            chan.onclick = function(){
+               
+                if(a==true){
+                    chan.style.backgroundColor="black";
+                    chan.style.color ="white";
+                    a = !a;
+                }else if(a==false){
+                    chan.style.backgroundColor="purple";
+                    a=!a;
+                }
+            }
+            
+            let tt = document.getElementById("tt");
+            tt.style.backgroundColor="aqua";
+            tt.onmouseover = function(){
+                
+                if(tt.style.backgroundColor=="aqua"){   
+                    tt.style.backgroundColor="red";
+                }
+                else if(tt.style.backgroundColor=="red"){
+                    tt.style.backgroundColor="aqua";
+                }
+
+            }
+
+            let yy = document.getElementById("yy");
+            yy.style.fontSize="x-large";
+            yy.ondblclick = function(){
+                if(yy.style.fontSize=="x-large"){
+                    yy.style.fontSize="small";
+                }else if(yy.style.fontSize=="small"){
+                    yy.style.fontSize="x-large";
+                }
+            }
+
+            
+          
+        </script>
+    </body>
+</html>

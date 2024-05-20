@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>BMI</title>
+    </head>
+    <body>
+        <div>
+            <h3>BMI</h3>
+            <p><label>신장
+                <input type="number" id="height" required>
+            </label></p>
+            <p><label>몸무게
+                <input type="number" id="weight" required>
+            </label></p>
+            <p><label>계산결과
+                <input type="number" id="result" readonly>
+            </label></p>
+            <p><label>BMI지수
+                <input type="text" id="bmi" readonly>
+            </label></p>
+            <button id="reset">초기화</button>
+        </div>
+        <script>
+            let a = document.querySelectorAll('input');
+            let b = document.querySelector('#reset');
+            a[1].onkeyup = function(){
+                a[2].value = (Number(a[1].value)/(Number(a[0].value)*Number(a[0].value))*10000).toFixed(2);
+                if(a[2].value<18.5){
+                    a[3].value ="저체중";
+                }else if(a[2].value<23){
+                    a[3].value = "정상";
+                }else if(a[2].value<25){
+                    a[3].value="과체중";
+                }else{
+                    a[3].value = "비만";
+                }
+            }
+            b.onclick =function(){
+                a[0].value = "";
+                a[1].value = "";
+                a[2].value = "";
+                a[3].value = "";
+            }
+        
+        </script>
+    </body>
+</html>

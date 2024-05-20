@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>단어장</title>
+    </head>
+    <body>
+        <h1>단어장</h1>
+        <p>기록할 단어를 입력후 추가버튼 누르세요</p>
+        <p>클릭해서 삭제하세요</p>
+        <input type="text" >
+        <input type="button" value="추가">
+        <hr>
+        <div>
+
+        </div>
+        <script>
+            let inputs = document.querySelectorAll("input");
+            let divText = document.querySelector("div");
+            let newUl = document.createElement("ul");
+            divText.appendChild(newUl);
+            
+            inputs[1].addEventListener("click",function(){
+                let textLine = inputs[0].value;
+                let newLi = document.createElement("li");
+                let newText = document.createTextNode(textLine);
+                newLi.appendChild(newText);
+                newUl.appendChild(newLi);
+                inputs[0].value="";
+                let liList = document.querySelectorAll("li");
+                
+                for(let i =0 ; i<liList.length;i++){
+                    liList[i].addEventListener("click",function(){
+                        liList[i].style.display="none";
+                    })
+                }
+                
+            });
+
+
+        </script>
+        
+    </body>
+</html>

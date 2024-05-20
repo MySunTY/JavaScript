@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>event</title>
+        <style>
+            div{
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="myDo()">버튼</button>
+        <button ondblclick="myDo()">버튼</button>
+        <button onmouseover="myDo()">버튼</button>
+        <button onmouseout="myDo()">버튼</button>
+        <button id ="btn">버튼</button>
+        <button id="redbtn">빨간버튼</button>
+        <button id ="lar">글자크게</button>
+        <button id="fon">폰트바꾸기</button>
+        <button id="jjin">폰트진하게</button>
+        <script>
+            function myDo(){
+                alert('버튼을 클릭했습니다');
+            }
+            let btn = document.getElementById("btn");
+            btn.onclick= function(){
+                btn.style.backgroundColor="yellow";
+            }
+            let redbtn = document.getElementById("redbtn");
+            redbtn.onmouseover=function(){
+                redbtn.style.color="red";
+            }
+            let lar = document.getElementById("lar");
+            lar.ondblclick = function(){
+                lar.style.fontSize="large";
+            }
+            let fon = document.getElementById("fon");
+            fon.onmouseout = function(){
+                fon.style.fontFamily="'Courier New', Courier, monospace";
+            }
+            let jjin = document.getElementById("jjin");
+            jjin.onclick= function(){
+                jjin.style.fontWeight="bold";
+            }
+            
+        </script>
+    </body>
+</html>

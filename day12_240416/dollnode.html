@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>인형 노드리스트</title>
+    </head>
+    <body>
+        <img src="../day11_240415/doll.png" id="doll1" alt="양인형">
+        <img src="../day11_240415/doll2.png" id="doll2" alt="양인형">
+        <img src="../day11_240415/doll.png" id="doll3" alt="양인형">
+        
+        <script>
+            let dollNode = document.querySelectorAll("img");
+            /*dollNode[0].onmouseover = function(){
+                dollNode[0].style.transform = "scale(110%)";
+                onmouseout = function(){
+                    dollNode[0].style.transform = "";
+                }
+            }*/
+            
+            for(let i = 0 ; i<dollNode.length;i++){
+                dollNode[i].onmouseover= function(){
+                    dollNode[i].style.transform="scale(120%)";
+                    onmouseout = function(){
+                        dollNode[i].style.transform="";
+                    }
+                }
+            }
+           
+        </script>
+    </body>
+</html>

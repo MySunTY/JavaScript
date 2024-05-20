@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>삼중배열</title>
+    </head>
+    <body>
+        <script>
+            let mem = new Array(3);
+            mem[0] = new Array(3);
+            mem[1] = new Array(3);
+            mem[2] = new Array(3);
+            mem[0][0] = new Array(3);
+            mem[0][1] = new Array(3);
+            mem[0][2] = new Array(3);
+            mem[1][0] = new Array(3);
+            mem[1][1] = new Array(3);
+            mem[1][2] = new Array(3);
+            mem[2][0] = new Array(3);
+            mem[2][1] = new Array(3);
+            mem[2][2] = new Array(3);
+            mem[0][0][0] = 1;
+            mem[0][0][1] = 2;
+            mem[0][0][2] = 3;
+            mem[0][1][0] = 4;
+            mem[0][1][1] = 5;
+            mem[0][1][2] = 6;
+            mem[0][2][0] = 7;
+            mem[0][2][1] = 8;
+            mem[0][2][2] = 9;
+            mem[1][0][0] = 10;
+            mem[1][0][1] = 11;
+            mem[1][0][2] = 12;
+            mem[1][1][0] = 13;
+            mem[1][1][1] = 14;
+            mem[1][1][2] = 15;
+            mem[1][2][0] = 16;
+            mem[1][2][1] = 17;
+            mem[1][2][2] = 18;
+            mem[2][0][0] = 19;
+            mem[2][0][1] = 20;
+            mem[2][0][2] = 21;
+            mem[2][1][0] = 22;
+            mem[2][1][1] = 23;
+            mem[2][1][2] = 24;
+            mem[2][2][0] = 25;
+            mem[2][2][1] = 26;
+            mem[2][2][2] = 27;
+
+            
+            for(let i = 0 ; i<mem.length ; i++){
+                for(let j = 0 ; j<mem[i].length; j++){
+                    for(let k = 0 ; k <mem[i][j].length ; k++){
+                        document.write("mem["+i+"]["+j+"]["+k+"] = "+mem[i][j][k]);
+                        document.write("<br>");
+                    }
+                }
+            }
+            
+        </script>
+    </body>
+</html>

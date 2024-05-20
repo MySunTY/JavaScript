@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>표만들기</title>
+        <style>
+            table{
+                border :1px solid black;
+                border-collapse: collapse;
+            }
+            tr, td{
+                border : 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" id="hang">행
+        <input type="text" id="yul">열
+        <input type="button" value="작성">
+        <input type="button" value="초기화">
+        <hr>
+        <table>
+           
+            
+            
+        </table>
+        <script>
+            let inputs = document.querySelectorAll("input");
+            let tables = document.querySelector("table");
+            let num = 0;
+            
+            inputs[2].addEventListener("click",function (){
+                for(let i =0; i<inputs[0].value; i++){
+                let newTr = document.createElement("tr")
+                tables.appendChild(newTr);
+                for(let j=0; j<inputs[1].value;j++ ){
+                    num+=1;
+                    let newTd = document.createElement("td");
+                    let newText = document.createTextNode(num);
+                    newTr.appendChild(newTd);
+                    newTd.appendChild(newText);
+                }//for2
+                    inputs[3].addEventListener("click",function (){
+                    tables.removeChild(newTr);
+                    inputs[0].value="";
+                    inputs[1].value="";
+                    num=0;
+
+                });
+                
+
+                }//for1
+
+
+            });//addEL
+             //addEL
+           
+
+
+        </script>
+    </body>
+</html>

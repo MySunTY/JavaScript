@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>극장 예약시스템</title>
+        <style>
+            div{
+                position: relative;
+            }
+            #container{
+                background-color: blanchedalmond;
+                width:1150px;
+                height:400px;
+
+            }
+            .seat{
+                display:inline-block;
+                width : 100px;
+                height : 100px;
+                background-color: aqua;
+                border : 1px solid black;
+                
+                
+            }
+            .seat1{
+                display:inline-block;
+                width : 100px;
+                height : 100px;
+                background-color: aqua;
+                border : 1px solid black;
+                
+                
+            }
+            .seat2{
+                display:inline-block;
+                width : 100px;
+                height : 100px;
+                background-color: aqua;
+                border : 1px solid black;
+                
+                
+            }
+            .result{
+                width :300px;
+                height : 100px;
+                background-color: red;
+                border : 1px solid black;
+            }
+            .resultP{
+                color:aliceblue;
+            }
+            span{
+                position: absolute;
+                color : black;
+                font-size: x-large;
+                display:none;
+                
+            }
+            
+
+        </style>
+
+    </head>
+    <body>
+        <h1>좌석 예약 시스템</h1>
+        <p>원하는 좌석을 클릭하세요</p>
+        <div id="container">
+            <div class="seat"><span class="span1"></span></div>
+            <div class="seat"><span class="span1"></span></div>
+            <div class="seat"><span class="span1"></span></div>
+            <div class="seat"><span class="span1"></span></div>
+            <div class="seat"><span class="span1"></span></div>
+            <div class="seat"><span class="span1"></span></div>
+            <div class="seat"><span class="span1"></span></div>
+            <div class="seat"><span class="span1"></span></div>
+            <div class="seat"><span class="span1"></span></div>
+            <div class="seat"><span class="span1"></span></div>
+            <div class="seat1"><span class="span2"></span></div>
+            <div class="seat1"><span class="span2"></span></div>
+            <div class="seat1"><span class="span2"></span></div>
+            <div class="seat1"><span class="span2"></span></div>
+            <div class="seat1"><span class="span2"></span></div>
+            <div class="seat1"><span class="span2"></span></div>
+            <div class="seat1"><span class="span2"></span></div>
+            <div class="seat1"><span class="span2"></span></div>
+            <div class="seat1"><span class="span2"></span></div>
+            <div class="seat1"><span class="span2"></span></div>
+            <div class="seat2"><span class="span3"></span></div>
+            <div class="seat2"><span class="span3"></span></div>
+            <div class="seat2"><span class="span3"></span></div>
+            <div class="seat2"><span class="span3"></span></div>
+            <div class="seat2"><span class="span3"></span></div>
+            <div class="seat2"><span class="span3"></span></div>
+            <div class="seat2"><span class="span3"></span></div>
+            <div class="seat2"><span class="span3"></span></div>
+            <div class="seat2"><span class="span3"></span></div>
+            <div class="seat2"><span class="span3"></span></div>
+           
+
+        </div>
+        <div class="result">결과창
+            <h1 class="resultP"></h1>
+            
+
+        </div>
+        <script>
+            let seats = document.getElementsByClassName("seat");
+            let seats1 = document.getElementsByClassName("seat1");
+            let seats2 = document.getElementsByClassName("seat2");
+            let result = document.getElementsByClassName("result");
+            let resultP = document.getElementsByClassName("resultP");
+            let spans1 = document.getElementsByClassName("span1");
+            let spans2 = document.getElementsByClassName("span2");
+            let spans3 = document.getElementsByClassName("span3");
+            
+            for(let i = 0 ; i<10; i++){
+                spans1[i].innerHTML = "좌석 A"+(i+1);
+            }
+            for(let i = 0 ; i<10; i++){
+                spans2[i].innerHTML = "좌석 B"+(i+1);
+            }
+            for(let i = 0 ; i<10; i++){
+                spans3[i].innerHTML = "좌석 C"+(i+1);
+            }
+           
+
+            
+            for(let i = 0 ; i<seats.length; i++){
+                
+                seats[i].addEventListener("click",function (){
+                    spans1[i].style.display="block";
+                    resultP[0].innerHTML = spans1[i].innerHTML;
+                    seats[i].style.backgroundColor="red";
+
+                });
+            }
+            for(let i = 0 ; i<seats.length; i++){
+                
+                seats1[i].addEventListener("click",function (){
+                    spans2[i].style.display="block";
+                    seats1[i].style.backgroundColor="red";
+                    resultP[0].innerHTML = spans2[i].innerHTML;
+
+                });
+            }
+            for(let i = 0 ; i<seats.length; i++){
+                
+                seats2[i].addEventListener("click",function (){
+                    spans3[i].style.display="block";
+                    seats2[i].style.backgroundColor="red";
+                    resultP[0].innerHTML = spans3[i].innerHTML;
+
+                });
+            }
+           
+
+           
+        </script>
+
+    </body>
+</html>

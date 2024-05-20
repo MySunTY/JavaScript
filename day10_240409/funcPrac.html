@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>좌석</title>
+        <style>
+            body{
+                width: 1500px;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: bolder;
+            }
+            div{
+                display: inline-block;
+                border : 1px solid black;
+                width :100px;
+                padding : 20px;
+                background-color: aqua;
+                text-align: center;
+            }
+            div:nth-child(2n){
+                background-color: aquamarine;
+            }
+            
+            
+            
+        </style>
+    </head>
+    <body>
+        <script>
+            let chair = new Array();
+            for(let i = 0 ; i<100; i++){
+                chair[i]=i+1;
+            }
+            for(let i =0; i<chair.length;i++){
+                document.write("<div>");
+                document.write("좌석"+chair[i]);
+                document.write("</div>");
+            }
+        </script>
+    </body>
+</html>

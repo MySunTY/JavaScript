@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>함수</title>
+    </head>
+    <body>
+        <script>
+            function hello(a){
+                document.write(a+"iot");
+            }
+            hello("javascript");
+
+            document.write("<br>");
+            let bb= hello;
+            bb("하이요");
+            document.write("<br>");
+
+            function printStar(count){
+                for(let i = 0 ; i<count ; i++)
+           
+                        document.write("*");
+                    
+                    document.write("<br>");
+                
+            }
+            printStar(5);
+            let yourFunc = printStar;
+            yourFunc(7);
+            yourFunc(10);
+        </script>
+    </body>
+</html>

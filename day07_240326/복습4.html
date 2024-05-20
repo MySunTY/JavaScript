@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>while</title>
+    </head>
+    <body>
+        <script>
+          /*  let pw = parseInt(prompt("비밀번호를 입력하세요"));
+            if(pw == 1234){
+                alert("환영합니다");
+            }else{
+                alert("패스워드를 잘못 입력했습니다. 다시 입력해주세요");
+                prompt("비밀번호를 입력하세요");
+            }*/
+
+            let pass = ""; //일단 변수를 만들고 시작하면 좋음
+            while(true){
+               pass=  prompt("패스워드를 입력해주세요");
+                if(pass=="1234"){
+                    alert("환영합니다");
+                    break; //while의 반복문을 정지시킴
+                }else{
+                    alert("패스워드 틀렷어");
+                }
+            }
+        </script>
+    </body>
+
+</html>

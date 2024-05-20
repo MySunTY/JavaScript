@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf">
+        <title>넓이구하기 22</title>
+    </head>
+    <body>
+        <script>
+            let garo = 0;
+            let sero = 0;
+            function multi(a,b){
+                garo = parseInt(prompt(a+"의 길이를 입력해주세요"));
+                sero = parseInt(prompt(b+"의 길이를 입력해주세요"));
+            }
+            function result(garo,sero){
+                return garo*sero;
+            }
+            multi("가로","세로");
+            
+            document.write(result(garo,sero));
+            document.write("<br>");
+            multi("가로","높이");
+            document.write(result(garo,sero)/2);
+        </script>
+    </body>
+</html>
+    
+

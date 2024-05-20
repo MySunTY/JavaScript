@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>do while반복문</title>
+    </head>
+    <body>
+        <script>
+            let id="";
+            let pw="";
+            do{
+                id = prompt("아이디를 입력해주세요");
+                pw = prompt("비밀번호를 입력해주세요");
+                
+                
+                if(id=="iot" && pw=="8888") {
+                    alert("환영합니다");
+                    document.write("로그인정보 id : "+id+ " , pw : "+pw);
+                    break; //반복문을 빠져나갈때 사용 , 반복문 내에서만 사용
+                }else if(id=="iot" && pw!="8888"){
+                    alert("비밀번호를 확인해주세요");
+                }else if(id!="iot" && pw=="8888"){
+                    alert("아이디를 확인해주세요");
+                }else{
+                    alert("아이디랑 비번 모두 틀렸어요");
+                }
+               
+                
+                
+            }while(true);
+            
+        </script>
+    </body>
+</html>

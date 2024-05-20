@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+    <html>
+        <meta charset="utf-8">
+        <title>bmi</title>
+    </html>
+    <body>
+        <h1>BMI</h1>
+        <form>
+        <label for="height">신장</label>
+        <input type="text" id = "height">
+        m /
+        <label for="weight">몸무게</label>
+        <input type="text" id = "weight">
+        kg
+        <input type="button" value="계산" id = "btn" onclick="calNum()">
+        <input type="reset" value="초기화" id = "chobtn" onclick="resetNum()">
+        <p>결과 :
+        <span id="result"></span></p>
+        <p>BMI :
+            <span id ="bmi"></span>
+        </p>
+    </form>
+
+        <script>
+            
+            function calNum(){
+                let a = document.getElementById("height").value;
+                let b = document.getElementById("weight").value;
+                let bmiNum= (Number(b)/(Number(a)*Number(a))).toFixed(2);
+
+                document.getElementById("result").innerHTML = bmiNum;
+                
+                if(bmiNum<18.5){
+                    document.getElementById("bmi").innerHTML = "저체중";
+                }else if(bmiNum<23){
+                    document.getElementById("bmi").innerHTML = "정상";
+                }else if(bmiNum<25){
+                document.getElementById("bmi").innerHTML = "과체중";
+                }else{
+                    document.getElementById("bmi").innerHTML = "비만";
+                }
+                
+            }
+
+            function resetNum(){
+                document.getElementById("result").innerHTML="";
+                document.getElementById("bmi").innerHTML ="";
+            }
+          
+        </script>
+    </body>
+</html>

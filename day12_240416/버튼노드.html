@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>버튼노드</title>
+    </head>
+    <body>
+        <button>버튼</button>
+        <button>버튼</button>
+        <button>버튼</button>
+        <button>버튼</button><br>
+        <button>버튼</button>
+        <button>버튼</button>
+        <button>버튼</button>
+        <button>버튼</button><br>
+        <button>버튼</button>
+        <button>버튼</button>
+        <button>버튼</button>
+        <button>버튼</button><br>
+
+
+        <script>
+            let bList = document.querySelectorAll("button");
+            for(let i =0 ; i <bList.length; i++){
+                if(i<9){
+                    bList[i].innerHTML="버튼0"+(i+1);
+                }
+                else{
+                    bList[i].innerHTML = "버튼"+(i+1);
+                }
+            }
+            let i ;
+            for(i = 0 ; i<4 ; i++){
+                bList[i].style.backgroundColor="yellow";
+                
+            }
+            for(i ; i<8 ; i++){
+                bList[i].style.backgroundColor="green";
+            }
+            for(i; i<bList.length;i++){
+                bList[i].style.backgroundColor="red";
+            }
+            
+            for(j=0 ; j<bList.length; j+=4){
+                bList[j].style.color= "gold";
+            }
+            for(j=1 ; j<bList.length; j+=4){
+                bList[j].style.color= "salmon";
+            }
+            for(j=2 ; j<bList.length; j+=4){
+                bList[j].style.color= "seegreen";
+            }
+            for(j=3 ; j<bList.length; j+=4){
+                bList[j].style.color= "cadetblue";
+            }
+
+            for(let k = 0; k <bList.length; k+=5){
+                bList[k].onmouseover =  function(){
+                bList[k].style.transform="scale(150%)";
+                onmouseout = function(){
+                    bList[k].style.transform="";
+                }
+                }
+            }
+            for(let k = 2; k <bList.length; k+=6){
+                bList[k].onmouseover =  function(){
+                bList[k].style.transform="scale(150%)";
+                onmouseout = function(){
+                    bList[k].style.transform="";
+                }
+                }
+            }
+
+            for(let t = 3 ; t<bList.length; t+=4){
+                bList[t].onclick = function(){
+                    bList[t].style.transform="scale(150%)";
+                    onmouseout= function(){
+                        bList[t].style.transform="";
+                    }
+                }
+            }
+
+            bList[0].onclick = function(){
+                bList[11].style.transform="scale(200%)";
+                onmouseout = function(){
+                    bList[11].style.transform ="";
+                }
+            }
+
+            bList[5].onclick = function(){
+                bList[3].style.transform="scale(200%)";
+                onmouseout = function(){
+                    bList[3].style.transform="";
+                }
+            }
+            
+            
+            
+            /*for(let i =0 ; i<3 ; i++){
+                document.write("<div>")
+                for(let j = 0 ; j<4; j++){
+                    document.write("<button>버튼"+(i+1)+"</button>");
+                    
+                }document.write("</div>");
+            }*/
+
+            
+
+
+        </script>
+    </body>
+</html>

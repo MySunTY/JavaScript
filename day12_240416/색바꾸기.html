@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>색 바꾸기</title>
+        <style>
+            div{
+                display : inline-block;
+                border : 1px solid black;
+                width : 100px;
+                height : 50px;
+                text-align: center;
+                line-height: 50px;
+                border-radius: 30%;
+            }
+            #green{
+                background-color: green;
+            }
+            #orange{
+                background-color: orange;
+            }
+            #purple{
+                background-color: purple;
+            }
+            #largebox{
+                width :300px;
+                height:300px;
+                margin-top: 30px;
+                border-radius: 0%;
+                background-color: beige;
+            }
+            h3{
+                color : white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id ="green">
+            Green
+        </div>
+        <div id ="orange">
+            Orange
+        </div>
+        <div id="purple">
+            Purple
+        </div>
+        <br>
+        <div id="largebox">
+            <h3 id="ds"></h3>
+            
+        </div>
+
+        <script>
+            let a = document.getElementById("green");
+            let b = document.getElementById("orange");
+            let c = document.getElementById("purple");
+            let d = document.getElementById("largebox");
+            let e = document.getElementById("ds");
+            a.onclick = function(){
+                d.style.backgroundColor="green";
+                e.style.display = "block";
+                e.innerHTML = "초록색";
+            }
+            b.onclick = function(){
+                d.style.backgroundColor="orange";
+                e.style.display = "block";
+                e.innerHTML = "오렌지색";
+            }
+            c.onclick= function(){
+                d.style.backgroundColor="purple";
+                e.style.display = "block";
+                e.innerHTML = "보라색";
+            }
+            d.onclick = function(){
+                d.style.backgroundColor ="";
+                e.style.display = "none";
+                
+            }
+
+            
+        </script>
+    </body>
+</html>
